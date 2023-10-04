@@ -1,0 +1,2 @@
+alias dd-source="cd ~/dd/dd-source"
+alias k="kubectl"
