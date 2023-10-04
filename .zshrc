@@ -20,9 +20,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
 
 
-# Point GOPATH to our go sources
-export GOPATH="${HOME?}/go"
-
 # Point DATADOG_ROOT to ~/dd symlink
 export DATADOG_ROOT="${HOME?}/dd"
 

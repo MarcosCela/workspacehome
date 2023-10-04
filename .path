@@ -1,3 +1,5 @@
+# Point GOPATH to our go sources
+export GOPATH="${HOME?}/go"
 # Add datadog devtools binaries to the PATH
 export PATH="${HOME?}/dd/devtools/bin:${PATH?}"
 # Add binaries that are go install-ed to PATH
