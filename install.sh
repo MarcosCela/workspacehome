@@ -22,6 +22,14 @@ kubectl krew install ctx
 kubectl krew install ns
 
 
+# Create soflinks
+ln -s ~/dotfiles/.alias ~/.alias
+ln -s ~/dotfiles/.path ~/.path
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+
+# Also include the oh-my-zsh folder as a whole
+ln -s ~/dotfiles/.oh-my-zsh ~/.oh-my-zsh
+
 
 
 echo "It is very much recommended that you restart your shell!"
