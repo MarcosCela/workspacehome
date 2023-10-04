@@ -16,7 +16,12 @@ sudo apt install fzf
   tar zxvf "${KREW}.tar.gz" &&
   ./"${KREW}" install krew
 )
-
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 ## Once we have krew, install kubectx and kubens as krew plugins
 kubectl krew install ctx
 kubectl krew install ns
+
+
+
+
+echo "It is very much recommended that you restart your shell!"

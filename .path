@@ -1,0 +1,6 @@
+# Add datadog devtools binaries to the PATH
+export PATH="${HOME?}/dd/devtools/bin:${PATH?}"
+# Add binaries that are go install-ed to PATH
+export PATH="${GOPATH?}/bin:${PATH?}"
+# Add krew plugins (kubectl plugins)
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

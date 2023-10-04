@@ -1,11 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Source other configs
+source ~/.alias
+source ~/.path
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 FZF_BASE=/usr/bin/fzf
 ZSH_THEME="marcos"
-
 
 zstyle ':omz:update' mode auto      # update automatically without asking
 
@@ -17,14 +20,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
 
 
-# Add datadog devtools binaries to the PATH
-export PATH="${HOME?}/dd/devtools/bin:${PATH?}"
-
 # Point GOPATH to our go sources
 export GOPATH="${HOME?}/go"
-
-# Add binaries that are go install-ed to PATH
-export PATH="${GOPATH?}/bin:${PATH?}"
 
 # Point DATADOG_ROOT to ~/dd symlink
 export DATADOG_ROOT="${HOME?}/dd"
@@ -48,5 +45,3 @@ export HELM_DRIVER=configmap
 # https://blog.golang.org/go116-module-changes
 export GO111MODULE=auto
 export GOPRIVATE=github.com/DataDog
-
-source ~/.alias
