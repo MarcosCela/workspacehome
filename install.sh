@@ -40,7 +40,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ln -s ~/dotfiles/.alias ~/.alias
 ln -s ~/dotfiles/.path ~/.path
 ln -s ~/dotfiles/.oh-my-zsh/themes/marcos.zsh-theme ~/.oh-my-zsh/themes/marcos.zsh-theme
-
 # Change custom zshrc with custom one
 rm ~/.zshrc; ln -s ~/dotfiles/.zshrc ~/.zshrc
 
