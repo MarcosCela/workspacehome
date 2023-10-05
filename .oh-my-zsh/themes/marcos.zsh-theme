@@ -31,12 +31,8 @@ local user_host="${PR_USER}%F{cyan}@${PR_HOST}"
 local current_dir="%B%F{blue}%~%f%b"
 local git_branch='$(git_prompt_info)'
 
-local namespace='$(kubens -c)'
-local context='$(kubectx -c)'
-local kubeinfo='<%{$FG[036]%}$(kubens -c)%{$reset_color%}☸%{$FG[038]%}$(kubectx -c)%{$reset_color%}>'
-local taskCount='<%{$FG[036]%}️$(task status:pending count)%{$reset_color%}%{$FG[038]%}%{$reset_color%}>'
 
-PROMPT="${taskCount} ${current_dir} \$(ruby_prompt_info) ${git_branch} ${kubeinfo}
+PROMPT="${current_dir} \$(ruby_prompt_info) ${git_branch}
 $PR_PROMPT "
 RPROMPT="${return_code}"
 
