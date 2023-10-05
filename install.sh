@@ -1,6 +1,12 @@
-#!/usr/bin/env sh
-echo "This is executed the first time someone logs in the environment"
-echo "Install fzf"
+#!/usr/bin/env zsh
+
+function printInfo() {
+    echo "********************************************************************************"
+    echo "$1"
+    echo "********************************************************************************"
+}
+printInfo "This is executed the first time someone logs in the environment"
+printInfo "Install fzf"
 sudo apt install fzf
 
 
@@ -23,20 +29,17 @@ kubectl krew install ns
 
 # Remove previous zsh-related files. This is required so that oh-my-zsh installs
 # correctly
-echo "Removing previous version of dotfiles"
+printInfo "Removing previous version of dotfiles"
 rm -rf ~/.oh-my-zsh
 rm ~/.alias ~/.path ~/.zshrc
-echo "Installing oh-my-zsh"
+printInfo "Installing oh-my-zsh"
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-# Create soflinks
+# Create soft links for dotfiles &&  zsh theme
 ln -s ~/dotfiles/.alias ~/.alias
 ln -s ~/dotfiles/.path ~/.path
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-
-# Also include the oh-my-zsh folder as a whole
-ln -s ~/dotfiles/.oh-my-zsh ~/.oh-my-zsh
+ln -s ~/dotfiles/.oh-my-zsh/themes/marcos.zsh-theme ~/.oh-my-zsh/themes/marcos.zsh-theme
 
 
-echo "It is very much recommended that you restart your shell!"
+printInfo "It is very much recommended that you restart your shell!"
