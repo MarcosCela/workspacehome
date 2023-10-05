@@ -21,6 +21,11 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 kubectl krew install ctx
 kubectl krew install ns
 
+# Remove previous zsh-related files. This is required so that oh-my-zsh installs
+# correctly
+echo "Removing previous version of dotfiles"
+rm -rf ~/.oh-my-zsh
+rm ~/.alias ~/.path ~/.zshrc
 echo "Installing oh-my-zsh"
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
