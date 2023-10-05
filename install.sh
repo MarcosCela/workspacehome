@@ -44,4 +44,7 @@ ln -s ~/dotfiles/.oh-my-zsh/themes/marcos.zsh-theme ~/.oh-my-zsh/themes/marcos.z
 # Change custom zshrc with custom one
 rm ~/.zshrc; ln -s ~/dotfiles/.zshrc ~/.zshrc
 
+printInfo "Setting up workspace..."
+setup-workspace
+
 printInfo "It is very much recommended that you restart your shell!"
