@@ -40,7 +40,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ln -s ~/dotfiles/.alias ~/.alias
 ln -s ~/dotfiles/.path ~/.path
 ln -s ~/dotfiles/.oh-my-zsh/themes/marcos.zsh-theme ~/.oh-my-zsh/themes/marcos.zsh-theme
-# Ensure that the custom ~/.zshrc is added at the end of the one that oh-my-zshrc sets up
-echo "source ~/dotfiles/.zshrc" >> ~/.zshrc
+
+# Change custom zshrc with custom one
+rm ~/.zshrc; ln -s ~/dotfiles/.zshrc ~/.zshrc
 
 printInfo "It is very much recommended that you restart your shell!"
