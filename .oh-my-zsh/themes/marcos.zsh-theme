@@ -30,7 +30,7 @@ local current_dir="%B%F{blue}%~%f%b"
 local git_branch='$(git_prompt_info)'
 
 
-PROMPT="$PR_HOST ${current_dir} \$(ruby_prompt_info) ${git_branch}
+PROMPT="$PR_HOST @ workspace ${current_dir} \$(ruby_prompt_info) ${git_branch}
 "
 RPROMPT="${return_code}"
 
